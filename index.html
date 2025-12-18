@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelo Hop | Análisis de Artista & Media Kit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chosen Palette: Energetic & Playful (Neon Urban) -->
+    <!-- Palette Hex Codes: #F472B6 (Pink), #3B82F6 (Blue), #A3E635 (Lime), #22D3EE (Cyan), #1E293B (Slate 900 - Background) -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hop-bg': '#0F172A',
+                        'hop-card': '#1E293B',
+                        'hop-pink': '#F472B6',
+                        'hop-blue': '#3B82F6',
+                        'hop-lime': '#A3E635',
+                        'hop-cyan': '#22D3EE',
+                        'hop-text': '#F1F5F9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A;
+            /* Slate 900 */
+            color: #F1F5F9;
+        }
+
+        /* Chart Container Styling - Critical for Responsiveness */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #F472B6, #22D3EE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Timeline Connector */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #3B82F6;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- Navbar / Header -->
+    <header class="w-full bg-hop-card border-b border-gray-700 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tighter">CHELO <span class="text-hop-cyan">HOP</span></h1>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="#overview" class="hover:text-hop-pink transition">Resumen</a>
+                <a href="#growth" class="hover:text-hop-pink transition">Crecimiento</a>
+                <a href="#audience" class="hover:text-hop-pink transition">Audiencia</a>
+                <a href="#music" class="hover:text-hop-pink transition">Música</a>
+                <a href="#profile" class="hover:text-hop-pink transition">Perfil</a>
+            </nav>
+            <div class="text-xs bg-hop-blue px-3 py-1 rounded-full text-white font-bold uppercase tracking-wider">Media
+                Kit 2024</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="overview" class="container mx-auto px-6 py-12 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6">La Nueva Voz del <br><span
+                    class="gradient-text">Underground Urbano</span></h2>
+            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                Chelo Hop irrumpe en la escena fusionando la lírica introspectiva del <strong>Boom Bap clásico</strong>
+                con las texturas atmosféricas del <strong>Trap moderno</strong>. Este análisis desglosa las métricas
+                clave que validan su rápido ascenso en el circuito independiente latinoamericano, destacando un
+                crecimiento orgánico impulsado por una base de fans leal y alta participación digital.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span
+                    class="bg-hop-card border border-hop-pink text-hop-pink px-4 py-2 rounded-full text-sm font-bold">🎤
+                    Artista Revelación</span>
+                <span
+                    class="bg-hop-card border border-hop-cyan text-hop-cyan px-4 py-2 rounded-full text-sm font-bold">🇨🇴
+                    Escena Colombia</span>
+                <span
+                    class="bg-hop-card border border-hop-lime text-hop-lime px-4 py-2 rounded-full text-sm font-bold">🔥
+                    8.5% Engagement</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- KPI Cards -->
+    <section class="container mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div
+                class="bg-hop-card p-6 rounded-xl shadow-lg border-l-4 border-hop-cyan hover:transform hover:scale-105 transition duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-gray-400 font-medium uppercase text-xs tracking-widest">Oyentes Mensuales</h3>
+                    <span class="text-2xl">🎧</span>
+                </div>
+                <p class="text-4xl font-bold text-white">25.4K</p>
+                <p class="text-hop-lime text-sm mt-2 flex items-center">
+                    <span class="mr-1">▲</span> +15% vs Mes Anterior
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div
+                class="bg-hop-card p-6 rounded-xl shadow-lg border-l-4 border-hop-pink hover:transform hover:scale-105 transition duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-gray-400 font-medium uppercase text-xs tracking-widest">Seguidores Totales</h3>
+                    <span class="text-2xl">👥</span>
+                </div>
+                <p class="text-4xl font-bold text-white">42.8K</p>
+                <p class="text-hop-lime text-sm mt-2 flex items-center">
+                    <span class="mr-1">▲</span> Instagram & TikTok
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div
+                class="bg-hop-card p-6 rounded-xl shadow-lg border-l-4 border-hop-blue hover:transform hover:scale-105 transition duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-gray-400 font-medium uppercase text-xs tracking-widest">Top Ciudad</h3>
+                    <span class="text-2xl">📍</span>
+                </div>
+                <p class="text-4xl font-bold text-white">Bogotá</p>
+                <p class="text-gray-400 text-sm mt-2">Seguido por CDMX y Santiago</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth & Streaming Section -->
+    <section id="growth" class="container mx-auto px-6 py-12">
+        <div class="mb-8">
+            <h3 class="text-3xl font-bold text-white mb-2 border-l-4 border-hop-lime pl-4">Trayectoria de Streaming</h3>
+            <p class="text-gray-400 max-w-2xl">
+                Análisis del crecimiento de reproducciones en los últimos 12 meses. Se observa un punto de inflexión
+                significativo en <strong>Agosto</strong> tras el lanzamiento del sencillo "Noches en Vela", consolidando
+                una audiencia recurrente.
+            </p>
+        </div>
+
+        <div class="bg-hop-card p-6 rounded-xl shadow-lg">
+            <div class="chart-container">
+                <canvas id="growthChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience & Demographics Grid -->
+    <section id="audience" class="container mx-auto px-6 py-12 bg-opacity-50 bg-slate-800 rounded-3xl">
+        <div class="mb-8 text-center">
+            <h3 class="text-3xl font-bold text-white mb-2">Perfil de la Audiencia</h3>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                ¿Quién escucha a Chelo Hop? Los datos revelan una audiencia joven y predominantemente urbana, conectada
+                digitalmente y activa en plataformas visuales.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Age Distribution -->
+            <div class="bg-hop-card p-6 rounded-xl shadow-lg flex flex-col items-center">
+                <h4 class="text-xl font-bold text-hop-pink mb-4 w-full text-left">Rango de Edad</h4>
+                <div class="chart-container">
+                    <canvas id="ageChart"></canvas>
+                </div>
+                <p class="text-sm text-gray-400 mt-4 text-center italic">El 65% de la audiencia tiene entre 18 y 27
+                    años.</p>
+            </div>
+
+            <!-- Geographic Reach -->
+            <div class="bg-hop-card p-6 rounded-xl shadow-lg">
+                <h4 class="text-xl font-bold text-hop-cyan mb-4">Top 5 Ciudades</h4>
+                <div class="chart-container">
+                    <canvas id="geoChart"></canvas>
+                </div>
+                <p class="text-sm text-gray-400 mt-4 italic">Fuerte penetración en capitales latinoamericanas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Performance Section -->
+    <section id="music" class="container mx-auto px-6 py-12">
+        <div class="mb-8">
+            <h3 class="text-3xl font-bold text-white mb-2 border-l-4 border-hop-pink pl-4">Rendimiento Musical</h3>
+            <p class="text-gray-400 max-w-2xl">
+                Desglose de las canciones más populares y la distribución del consumo por plataforma. "Callejón" se
+                mantiene como el himno indiscutible, mientras que Spotify domina como la fuente principal de ingresos.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Top Tracks Bar Chart (Takes 2 columns) -->
+            <div class="lg:col-span-2 bg-hop-card p-6 rounded-xl shadow-lg">
+                <h4 class="text-xl font-bold text-white mb-6">Canciones Más Escuchadas (Streams Totales)</h4>
+                <div class="chart-container">
+                    <canvas id="tracksChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Platform Distribution Pie Chart (Takes 1 column) -->
+            <div class="bg-hop-card p-6 rounded-xl shadow-lg flex flex-col items-center justify-center">
+                <h4 class="text-xl font-bold text-white mb-6 w-full text-left">Plataformas</h4>
+                <div class="chart-container" style="height: 250px;">
+                    <canvas id="platformChart"></canvas>
+                </div>
+                <ul class="mt-6 text-sm text-gray-300 w-full space-y-2">
+                    <li class="flex justify-between"><span>Spotify</span> <span
+                            class="font-bold text-hop-lime">60%</span></li>
+                    <li class="flex justify-between"><span>YouTube</span> <span
+                            class="font-bold text-hop-pink">25%</span></li>
+                    <li class="flex justify-between"><span>Apple Music</span> <span
+                            class="font-bold text-hop-blue">10%</span></li>
+                    <li class="flex justify-between"><span>Otros</span> <span class="font-bold text-gray-500">5%</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artistic Profile Radar -->
+    <section id="profile" class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- Text Content -->
+            <div>
+                <h3 class="text-3xl font-bold text-white mb-4">ADN Artístico</h3>
+                <p class="text-gray-300 mb-6 text-justify">
+                    Chelo Hop no es solo números; es un estilo definido. El análisis de sus composiciones revela un
+                    enfoque prioritario en el <strong>Lirismo</strong> y el <strong>Flow</strong>, característico del
+                    rap de conciencia, equilibrado con una producción moderna pero minimalista.
+                </p>
+                <div class="space-y-4">
+                    <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-hop-lime">
+                        <h5 class="font-bold text-white">✍️ Lirismo (90/100)</h5>
+                        <p class="text-sm text-gray-400">Rimas complejas, narrativa social y storytelling personal.</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-hop-cyan">
+                        <h5 class="font-bold text-white">🌊 Flow & Ritmo (85/100)</h5>
+                        <p class="text-sm text-gray-400">Versatilidad entre tempos rápidos y cadencias melódicas.</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-hop-pink">
+                        <h5 class="font-bold text-white">🎹 Producción (70/100)</h5>
+                        <p class="text-sm text-gray-400">Estética Lo-Fi y Boom Bap, priorizando la voz sobre el beat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Radar Chart -->
+            <div class="bg-hop-card p-6 rounded-xl shadow-lg flex justify-center items-center">
+                <div class="chart-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Timeline (HTML/CSS) -->
+    <section class="container mx-auto px-6 py-12 mb-12">
+        <h3 class="text-3xl font-bold text-white mb-12 text-center">Hitos de Carrera</h3>
+        <div class="relative max-w-4xl mx-auto">
+            <div class="timeline-line"></div>
+
+            <!-- Milestone 1 -->
+            <div class="relative mb-12 flex flex-col md:flex-row items-center w-full">
+                <div class="order-1 md:w-5/12 text-center md:text-right px-4">
+                    <h4 class="text-hop-pink font-bold text-xl">Debut EP "Orígenes"</h4>
+                    <p class="text-gray-400 text-sm">Enero 2023</p>
+                    <p class="text-gray-300 mt-2 text-sm">Lanzamiento independiente que estableció el sonido base de
+                        Chelo. 5k streams en primera semana.</p>
+                </div>
+                <div
+                    class="z-10 order-2 bg-hop-card border-4 border-hop-pink rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-xl">
+                    💿</div>
+                <div class="order-3 md:w-5/12 px-4"></div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="relative mb-12 flex flex-col md:flex-row items-center w-full">
+                <div class="order-1 md:w-5/12 px-4"></div>
+                <div
+                    class="z-10 order-2 bg-hop-card border-4 border-hop-cyan rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-xl">
+                    🎥</div>
+                <div class="order-3 md:w-5/12 text-center md:text-left px-4">
+                    <h4 class="text-hop-cyan font-bold text-xl">Viralización "Noches en Vela"</h4>
+                    <p class="text-gray-400 text-sm">Agosto 2023</p>
+                    <p class="text-gray-300 mt-2 text-sm">Trend en TikTok generó +15k seguidores nuevos y triplicó el
+                        tráfico en Spotify.</p>
+                </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="relative flex flex-col md:flex-row items-center w-full">
+                <div class="order-1 md:w-5/12 text-center md:text-right px-4">
+                    <h4 class="text-hop-lime font-bold text-xl">Festival "Distrito Urbano"</h4>
+                    <p class="text-gray-400 text-sm">Diciembre 2023</p>
+                    <p class="text-gray-300 mt-2 text-sm">Primera presentación en vivo ante +2,000 personas en Bogotá.
+                    </p>
+                </div>
+                <div
+                    class="z-10 order-2 bg-hop-card border-4 border-hop-lime rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-xl">
+                    🎤</div>
+                <div class="order-3 md:w-5/12 px-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 text-center border-t border-gray-800">
+        <p class="text-gray-500 text-sm">
+            &copy; 2024 Chelo Hop Management. Todos los derechos reservados.<br>
+            <span class="text-xs italic mt-2 block">Nota: Los datos presentados son proyecciones ilustrativas basadas en
+                el perfil actual del artista.</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript for Charts -->
+    <script>
+        // --- UTILITY FUNCTIONS ---
+        // Label wrapping logic for Chart.js
+        function formatLabels(labels) {
+            return labels.map(label => {
+                if (label.length > 16) {
+                    const words = label.split(' ');
+                    const lines = [];
+                    let currentLine = words[0];
+
+                    for (let i = 1; i < words.length; i++) {
+                        if ((currentLine + " " + words[i]).length < 16) {
+                            currentLine += " " + words[i];
+                        } else {
+                            lines.push(currentLine);
+                            currentLine = words[i];
+                        }
+                    }
+                    lines.push(currentLine);
+                    return lines;
+                }
+                return label;
+            });
+        }
+
+        // Common Tooltip Configuration
+        const commonTooltipConfig = {
+            callbacks: {
+                title: function (tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- CHART CONFIGURATIONS ---
+
+        // 1. Growth Line Chart
+        const ctxGrowth = document.getElementById('growthChart').getContext('2d');
+        new Chart(ctxGrowth, {
+            type: 'line',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Streams Mensuales',
+                    data: [5000, 5500, 6200, 7000, 8500, 9000, 11000, 22000, 28000, 32000, 35000, 42000],
+                    borderColor: '#A3E635', // Lime
+                    backgroundColor: 'rgba(163, 230, 53, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#0F172A',
+                    pointBorderColor: '#A3E635',
+                    pointBorderWidth: 2,
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipConfig
+                },
+                scales: {
+                    y: {
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94A3B8' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#94A3B8' }
+                    }
+                }
+            }
+        });
+
+        // 2. Age Demographics Doughnut
+        const ctxAge = document.getElementById('ageChart').getContext('2d');
+        new Chart(ctxAge, {
+            type: 'doughnut',
+            data: {
+                labels: ['13-17', '18-24', '25-34', '35-44', '45+'],
+                datasets: [{
+                    data: [15, 45, 30, 8, 2],
+                    backgroundColor: [
+                        '#3B82F6', // Blue
+                        '#F472B6', // Pink (Main demographic)
+                        '#22D3EE', // Cyan
+                        '#A3E635', // Lime
+                        '#64748B'  // Gray
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { color: '#F1F5F9' }
+                    },
+                    tooltip: commonTooltipConfig
+                }
+            }
+        });
+
+        // 3. Geographic Reach Bar Chart
+        const ctxGeo = document.getElementById('geoChart').getContext('2d');
+        const cityLabels = formatLabels(['Bogotá, Colombia', 'CDMX, México', 'Santiago, Chile', 'Medellín, Colombia', 'Lima, Perú']);
+        new Chart(ctxGeo, {
+            type: 'bar',
+            data: {
+                labels: cityLabels,
+                datasets: [{
+                    label: 'Oyentes',
+                    data: [8500, 6200, 4800, 3500, 2400],
+                    backgroundColor: '#22D3EE',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipConfig
+                },
+                scales: {
+                    y: {
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94A3B8' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#F1F5F9', font: { size: 10 } }
+                    }
+                }
+            }
+        });
+
+        // 4. Top Tracks Horizontal Bar
+        const ctxTracks = document.getElementById('tracksChart').getContext('2d');
+        const trackLabels = formatLabels(['Callejón (feat. Z)', 'Noches en Vela', 'Ritmo Roto', 'Luz de Neón', 'Beat Puro']);
+        new Chart(ctxTracks, {
+            type: 'bar',
+            data: {
+                labels: trackLabels,
+                datasets: [{
+                    label: 'Reproducciones Totales',
+                    data: [150000, 120000, 85000, 60000, 45000],
+                    backgroundColor: [
+                        '#F472B6',
+                        '#F472B6',
+                        '#3B82F6',
+                        '#3B82F6',
+                        '#3B82F6'
+                    ],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal Bar
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipConfig
+                },
+                scales: {
+                    x: {
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94A3B8' }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: '#F1F5F9' }
+                    }
+                }
+            }
+        });
+
+        // 5. Platform Pie Chart
+        const ctxPlatform = document.getElementById('platformChart').getContext('2d');
+        new Chart(ctxPlatform, {
+            type: 'pie',
+            data: {
+                labels: ['Spotify', 'YouTube', 'Apple Music', 'Otros'],
+                datasets: [{
+                    data: [60, 25, 10, 5],
+                    backgroundColor: ['#A3E635', '#F472B6', '#3B82F6', '#64748B'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }, // Custom legend used in HTML
+                    tooltip: commonTooltipConfig
+                }
+            }
+        });
+
+        // 6. Artistic Profile Radar
+        const ctxRadar = document.getElementById('radarChart').getContext('2d');
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: ['Lirismo', 'Flow', 'Producción', 'Visuales', 'Originalidad', 'Comercialidad'],
+                datasets: [{
+                    label: 'Perfil Artístico',
+                    data: [90, 85, 70, 75, 80, 60],
+                    fill: true,
+                    backgroundColor: 'rgba(34, 211, 238, 0.2)', // Cyan alpha
+                    borderColor: '#22D3EE',
+                    pointBackgroundColor: '#F472B6',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#F472B6'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipConfig
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#334155' },
+                        grid: { color: '#334155' },
+                        pointLabels: {
+                            color: '#F1F5F9',
+                            font: { size: 12 }
+                        },
+                        ticks: { display: false, backdropColor: 'transparent' }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Application Structure Plan:
+         This SPA is structured as a vertical scrolling Artist Media Kit.
+         1. Hero Section: Sets the tone and artist identity.
+         2. KPI Grid: Provides immediate "Inform" value with big numbers.
+         3. Growth Section: "Change" visualization showing momentum.
+         4. Audience Section: "Inform" and "Compare" demographics for potential sponsors/venues.
+         5. Music Section: "Rank" top songs and "Inform" platform split.
+         6. Profile Section: "Relationships" radar chart defining the artist's qualitative style.
+         7. Timeline: "Organize" career history visually.
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Listeners/Followers -> Inform -> KPI Cards -> High impact, quick read.
+         2. Monthly Streams -> Change -> Line Chart -> Shows trend/growth velocity.
+         3. Age Demographics -> Inform -> Doughnut Chart -> Easy proportion visualization.
+         4. Geographic Reach -> Compare -> Bar Chart -> Clean ranking of top markets.
+         5. Top Tracks -> Rank -> Horizontal Bar Chart -> Readable song titles (using label wrapping).
+         6. Platform Split -> Inform -> Pie Chart -> Standard breakdown format.
+         7. Artistic Skills -> Relationships -> Radar Chart -> Standard music industry "stat wheel" visualization.
+    -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</body>
+
+</html>
